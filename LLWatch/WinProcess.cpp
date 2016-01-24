@@ -173,7 +173,12 @@ void WinProcess::CreateChildProcess(const std::string& rawCommandLine, unsigned 
 
 					   // If an error occurs, exit the application. 
 	if (!bSuccess)
+	{
 		ErrorExit("CreateProcess");
+		std::cerr << " Make sure you proceed command with --\n"
+			" And that executable is either in path or you specify \n"
+			" full path to executable \n";
+	}
 	else
 	{
 		m_exitCode = 0;

@@ -84,10 +84,12 @@ char sUsage[] =
 "\n"
 "EXAMPLES:\n"
 "    To watch the contents of a directory change, you could use: \n"
-"       watch dir *.txt \n"
+"       llwatch -- cmd /c dir *.txt \n"
 "\n"
-"    Use grep to filter command output\n"
-"       watch \"dir | grep -i jan\"  \n"
+"    Use find to filter command output\n"
+"       llwatch -- cmd /c \"c:\\Windows\\System32\\tasklist.exe | find \"Console\"\" \n"
+"    Use built-in grep filter to file command output\n"
+"       llwatch -g Console -- c:\\Windows\\System32\\tasklist.exe \n"
 "\n"
 "\n";
 
@@ -190,12 +192,13 @@ int main(int argc, const char *argv[])
 {
 	if (argc == 1)
 	{
-		std::cerr << "Specify a command to execute\n";
+		std::cerr << sUsage;
 		return -1;
 	}
 
 	lstring cmdLine = GetCommandLine();
-	cmdLine.erase(0, strlen(argv[0])+3);
+    size_t eraseCnt = strlen(argv[0]) + 1 + ((cmdLine.at(0) == '"') ? 2 : 0);
+    cmdLine.erase(0, eraseCnt);
 	int off = (int)cmdLine.find("--");
 	if (off != -1)
 		cmdLine.erase(0, off + 2);
