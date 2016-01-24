@@ -19,7 +19,7 @@ USAGE:
 
 DESCRIPTION:  Watch runs command repeatedly, displaying its output. This allows you to
   Watch the program output change over time. By default, the program is run
-  every 2 seconds. 
+  every 2 seconds.
 
   -d  Disable highlighting the differences between successive updates.
   -h  Home cursor between updates
@@ -28,13 +28,14 @@ DESCRIPTION:  Watch runs command repeatedly, displaying its output. This allows 
   -b <#lines> Limit output to bottom # lines, default is all
   -v  Toggle verbose output
   -g <pattern> Match grep pattern for line to show.
-  -r <replace> Use with -g and perform replacement per line before show.
+  -r <replace> Use with -g and perform replacement per line.
 
 EXAMPLES:
     To watch the contents of a directory change, you could use:
-       watch dir *.txt
+       llwatch -- cmd /c dir *.txt
 
-    Use grep to filter command output
-       watch "dir | grep -i jan"
-
+    Use find to filter command output
+       llwatch -- cmd /c "c:\Windows\System32\tasklist.exe | find "Console""
+    Use built-in grep filter to file command output
+       llwatch -g Console -- c:\Windows\System32\tasklist.exe
 </pre>
