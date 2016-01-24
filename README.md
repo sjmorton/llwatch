@@ -6,7 +6,7 @@ Optionally homing the cusor and highlighting changes.
 
 
 Help Banner:
-
+<pre>
 LLWatch v1.1 - Jan 23 2016
 By: Dennis Lang
 https://landenlabs.com/
@@ -37,4 +37,4 @@ EXAMPLES:
     Use grep to filter command output
        watch "dir | grep -i jan"
 
-
+</pre>
