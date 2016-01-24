@@ -54,7 +54,7 @@ typedef std::string String;
 #define _VERSION "v1.1"
 char sUsage[] =
 "\n"
-"Watch " _VERSION " - " __DATE__ "\n"
+"LLWatch " _VERSION " - " __DATE__ "\n"
 "By: Dennis Lang\n"
 "https://landenlabs.com/\n"
 "\n"
@@ -67,7 +67,7 @@ char sUsage[] =
 "DESCRIPTION:"
 "  Watch runs command repeatedly, displaying its output. This allows you to \n"
 "  Watch the program output change over time. By default, the program is run\n"
-"  every 2 seconds. U\n"
+"  every 2 seconds. \n"
 "\n"
 "  -d  Disable highlighting the differences between successive updates. \n"
 "  -h  Home cursor between updates \n"
@@ -78,7 +78,7 @@ char sUsage[] =
 
 #ifdef HAVE_REGEX
 "  -g <pattern> Match grep pattern for line to show. \n"
-"  -r <replace> With grep, replace per line before show. \n"
+"  -r <replace> Use with -g and perform replacement per line.  \n"
 #endif
 
 "\n"
