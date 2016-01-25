@@ -6,7 +6,7 @@ Optionally homing the cusor and highlighting changes.
 
 Visit home website
 
-![http://landenlabs.com/index.html](http://landenlabs.com/index.html)
+!(http://landenlabs.com/index.html)[http://landenlabs.com/index.html]
 
 
 Help Banner:
