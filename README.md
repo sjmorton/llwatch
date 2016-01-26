@@ -43,3 +43,5 @@ EXAMPLES:
     Use built-in grep filter to file command output
        llwatch -g Console -- c:\Windows\System32\tasklist.exe
 </pre>
+
+![http://landenlabs.com/console/llwatch/help.png](http://landenlabs.com/console/llwatch/help.png)
