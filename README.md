@@ -44,4 +44,15 @@ EXAMPLES:
        llwatch -g Console -- c:\Windows\System32\tasklist.exe
 </pre>
 
+Help banner
+
 ![http://landenlabs.com/console/llwatch/help.png](http://landenlabs.com/console/llwatch/help.png)
+
+Example of scrolling output and highlighted changes:
+
+![http://landenlabs.com/console/llwatch/tasklist.png](http://landenlabs.com/console/llwatch/tasklist.png)
+
+Example of updating screen with 'home screen' enabled:
+
+![http://landenlabs.com/console/llwatch/refresh.gif](http://landenlabs.com/console/llwatch/refresh.gif)
+
