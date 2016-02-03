@@ -39,7 +39,7 @@
 class WinProcess
 {
 public:
-	WinProcess() {}
+	WinProcess() { m_extn = NULL;  }
 
 	Hnd m_hChildStd_IN_Rd;
 	Hnd m_hChildStd_IN_Wr;
@@ -49,7 +49,7 @@ public:
 	PROCESS_INFORMATION m_piProcInfo;
 	STARTUPINFO			m_siStartInfo;
 
-	const char* m_extn = NULL;
+	const char* m_extn;
 	std::string m_lastExeName;
 
 	DWORD m_exitCode;
