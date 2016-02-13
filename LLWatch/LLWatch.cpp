@@ -27,6 +27,8 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 // ------------------------------------------------------------------------------------------------
+ 
+#pragma warning( disable : 4995 )
 
 #include <Windows.h>
 
@@ -144,12 +146,12 @@ void TrimTopBottom(lstring& currBuffer, uint topLines, uint bottomLines)
 	if (lineCnt > bottomLines && bottomLines != 0)
 	{
 		uint skipLines = lineCnt - bottomLines;
-		int offset = currBuffer.findCnt(eol, 0, skipLines);
+		size_t offset = currBuffer.findCnt(eol, 0, skipLines);
 		currBuffer.erase(0, offset);
 	}
 	else if (lineCnt > topLines && topLines != 0)
 	{
-		int offset = currBuffer.findCnt(eol, 0, topLines);
+		size_t offset = currBuffer.findCnt(eol, 0, topLines);
 		currBuffer.resize(offset + eol.length());
 	}
 }

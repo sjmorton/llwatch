@@ -51,6 +51,9 @@ class WinCursor
 
 	static void ClearScreen(const std::string& ch)
 	{
+#if 1
+		system("cls");
+#else
 		HANDLE output = GetStdHandle(STD_OUTPUT_HANDLE);
 
 		for (uint x = 0; x < 85; x++)
@@ -60,5 +63,6 @@ class WinCursor
 				SetCursorPosition(x, y);
 			}
 		}
+#endif
 	}
 };

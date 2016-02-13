@@ -70,19 +70,19 @@ public:
     unsigned int count(const std::string& subStr) const
 	{
 		unsigned int cnt = 0;
-		int subLen = (int)subStr.length();
-		int pos = -subLen;
-		while ((pos = (int)find(subStr, pos + subLen)) < length())
+		size_t subLen = subStr.length();
+		size_t pos = 0 - subLen;
+		while ((pos = find(subStr, pos + subLen)) < length())
 			cnt++;
 
 		return cnt;
 	}
 
-	unsigned int findCnt(const std::string& subStr, int pos, unsigned cnt) const
+	size_t findCnt(const std::string& subStr, size_t pos, unsigned cnt) const
 	{
-		int subLen = (int)subStr.length();
+		size_t subLen = subStr.length();
 		pos -= subLen;
-		while (cnt > 0 && (pos = (int)find(subStr, pos + subLen)) < length())
+		while (cnt != 0 && (pos = find(subStr, pos + subLen)) < length())
 			cnt--;
 
 		return (cnt == 0) ? pos : -1;
